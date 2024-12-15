@@ -1,0 +1,21 @@
+[project]
+name = "python-mcp"
+version = "0.1.0"
+description = "Discover how MCP simplifies the integration of AI models into a data and tools ecosystem with a standardized and flexible solution."
+readme = "README.md"
+authors = [{ name = "Vincent Lambert", email = "v.lambert@eurelis.com" }]
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp>=1.1.2",
+    "nest-asyncio>=1.6.0",
+    "spacexpy>=2.0.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+spacex = "python_mcp.spacex:run"
+weather = "python_mcp.weather.server:run"
